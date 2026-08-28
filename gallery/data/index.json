@@ -1,4 +1,9 @@
 [ {
+  "id" : "4",
+  "d" : "4 lines · no parallel pairs",
+  "k" : true,
+  "a" : true
+}, {
   "id" : "4-1",
   "d" : "4 lines · 1 parallel pair",
   "k" : true,
@@ -223,6 +228,11 @@
   "d" : "33 lines · no parallel pairs",
   "k" : true,
   "a" : true
+}, {
+  "id" : "38",
+  "d" : "38 lines · no parallel pairs",
+  "k" : true,
+  "a" : false
 }, {
   "id" : "50",
   "d" : "50 lines · no parallel pairs",
