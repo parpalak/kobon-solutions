@@ -239,10 +239,35 @@
   "k" : true,
   "a" : true
 }, {
+  "id" : "37",
+  "d" : "37 lines · no parallel pairs",
+  "k" : true,
+  "a" : true
+}, {
   "id" : "38",
   "d" : "38 lines · no parallel pairs",
   "k" : true,
   "a" : false
+}, {
+  "id" : "41",
+  "d" : "41 lines · no parallel pairs",
+  "k" : true,
+  "a" : true
+}, {
+  "id" : "42",
+  "d" : "42 lines · no parallel pairs",
+  "k" : true,
+  "a" : true
+}, {
+  "id" : "45",
+  "d" : "45 lines · no parallel pairs",
+  "k" : true,
+  "a" : true
+}, {
+  "id" : "46",
+  "d" : "46 lines · no parallel pairs",
+  "k" : true,
+  "a" : true
 }, {
   "id" : "50",
   "d" : "50 lines · no parallel pairs",
