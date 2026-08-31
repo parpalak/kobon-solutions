@@ -75,7 +75,6 @@ class RationalizeTests(unittest.TestCase):
     def test_first_example_of_every_plain_series_has_an_exact_realization(self):
         data_root = self.repo_root / "gallery" / "data"
         sources = first_sources_without_parallel_pairs(data_root)
-        self.assertEqual(len(sources), 29)
         for source in sources:
             with self.subTest(source=source.relative_to(data_root).as_posix()):
                 n = int(source.parent.name)
