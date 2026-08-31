@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "source": "gallery/data/4/4-3c0mje3lcs4a1.json",
+  "source_sha256": "879f7befb420fc533bc2d4446040653cc57123cd08741b8650427561f6dd8e33",
+  "gens": "0 1* 0 1",
+  "n": 4,
+  "triangle_count": 2,
+  "line_equation": "a*x + b*y = c",
+  "lines_frac": [
+    [
+      "-1/2",
+      "-1",
+      "-11/2"
+    ],
+    [
+      "-5/2",
+      "-1",
+      "133/2"
+    ],
+    [
+      "5/2",
+      "-1",
+      "83/4"
+    ],
+    [
+      "1/2",
+      "-1",
+      "13/4"
+    ]
+  ],
+  "declared_triple_points": [
+    [
+      0,
+      2,
+      3
+    ]
+  ],
+  "declared_parallel_pairs": [],
+  "rationalization": {
+    "method": "coefficient-rounding-and-linear-projection",
+    "max_coefficient_denominator": 2
+  }
+}

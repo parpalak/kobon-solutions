@@ -1,0 +1,66 @@
+name: Verify gallery
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-gallery-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  quick-check:
+    name: Quick check
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Run unit tests
+        run: python3 -m unittest discover -v
+
+      - name: Check all gallery sources
+        run: python3 verification/quick_check.py
+
+  certificates:
+    name: Exact certificates
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Verify exact realization certificates
+        run: python3 verification/verify_certificates.py
+
+  independent-verifiers:
+    name: Independent verifiers
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+
+      - name: Run direct exact verifier
+        shell: bash
+        run: |
+          set -euo pipefail
+          for certificate in gallery/certificates/*/*.json; do
+            python3 verification/verify_direct_exact.py "$certificate"
+          done
+
+      - name: Run event-based verifier
+        shell: bash
+        run: |
+          set -euo pipefail
+          for certificate in gallery/certificates/*/*.json; do
+            python3 verification/verify_events.py "$certificate"
+          done
