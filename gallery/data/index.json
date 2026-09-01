@@ -224,6 +224,16 @@
   "k" : true,
   "a" : true
 }, {
+  "id" : "32",
+  "d" : "32 lines · no parallel pairs",
+  "k" : true,
+  "a" : false
+}, {
+  "id" : "32-1",
+  "d" : "32 lines · 1 parallel pair",
+  "k" : true,
+  "a" : false
+}, {
   "id" : "33",
   "d" : "33 lines · no parallel pairs",
   "k" : true,
