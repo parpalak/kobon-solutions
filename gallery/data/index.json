@@ -284,6 +284,16 @@
   "k" : true,
   "a" : false
 }, {
+  "id" : "39-s",
+  "d" : "39 lines · suboptimal",
+  "k" : false,
+  "a" : false
+}, {
+  "id" : "40-s",
+  "d" : "40 lines · suboptimal",
+  "k" : false,
+  "a" : false
+}, {
   "id" : "41",
   "d" : "41 lines · no parallel pairs",
   "k" : true,
